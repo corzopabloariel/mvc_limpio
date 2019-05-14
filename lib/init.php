@@ -10,3 +10,8 @@ foreach (new DirectoryIterator(APP_PATH."models/") as $file) {
 	if($file->isDot()) continue;
 	require APP_PATH."models/{$file->getFilename()}";
 }
+
+foreach (new DirectoryIterator(APP_PATH."controllers/") as $file) {
+	if($file->isDot()) continue;
+	require APP_PATH."controllers/{$file->getFilename()}";
+}

@@ -13,7 +13,7 @@ chdir(dirname(__DIR__));
 
 define("SYS_PATH", "lib/");
 define("APP_PATH", "app/");
-define("RUTA_HTTP","http://localhost/MVC_Limpio/");
+define("RUTA_HTTP","http://localhost/ritossa/");
 define("IMG_DEFAULT", "assets/images/default.jpg");
 
 require SYS_PATH."init.php";

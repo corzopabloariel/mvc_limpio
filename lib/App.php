@@ -1,8 +1,8 @@
 <?php
 require_once "default.php";
 class App {
-    protected $controller   = "DefaultsController";
-    protected $method       = "actionIndex";
+    protected $controller   = "";
+    protected $method       = "";
     protected $params       = [];
 
     public function __construct() {
@@ -25,6 +25,7 @@ class App {
             //$this->method = METHOD_NOT_FOUND;
             //$this->controller = DEFAULT_CONTROLLER;
         }
+        
         if(isset($url[1])) {
             $methodName = strtolower($url[1])."Action";
             if(method_exists($this->controller,$methodName)){
@@ -34,9 +35,12 @@ class App {
                 $this->method = METHOD_NOT_FOUND;
                 $this->controller = DEFAULT_CONTROLLER;
             }
+        } else {
+            $this->method = METHOD_DEFAULT;
+            $this->controller = DEFAULT_CONTROLLER;
         }
         $this->params = $url ? array_values($url) : $this->params;
-print_r($this->params);die();
+        //print_r($this->method);die();
         call_user_func_array([$this->controller,$this->method],[$this->params]);
     }
 

@@ -1,11 +1,11 @@
 <?php
 class Response {
-		private function __construct() {}
+	private function __construct() {}
 
-		public static function render($view, $vars = []) {
-				foreach ($vars as $key => $value)
-					$$key = $value;
+	public static function render($view, $vars = []) {
+		foreach ($vars as $key => $value)
+			$$key = $value;
 
-				require APP_PATH."views/{$view}.php";
-		}
+		require APP_PATH."views/{$view}.php";
+	}
 }

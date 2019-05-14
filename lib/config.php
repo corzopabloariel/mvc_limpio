@@ -6,7 +6,7 @@
  * Clave de la BD
  * Número de 8 dígitos, intercalado una palabra
  */
-define("CONFIG_USER", "admin%mutual");
-define("CONFIG_PASS", "5y6o4u8k5o3s0o3");
-define("CONFIG_BD",   "mutual_58876472");
+define("CONFIG_USER", "root");
+define("CONFIG_PASS", "");
+define("CONFIG_BD",   "ritossa2");
 define("CONFIG_HOST", "localhost");
